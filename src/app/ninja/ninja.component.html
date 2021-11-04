@@ -1,0 +1,7 @@
+<div *ngIf="currency$ | async as currencyData">
+  <div *ngFor="let item of currencyData.lines">
+    {{
+      translation(currencyData.language.translations, item.currencyTypeName)
+    }}:{{ item.chaosEquivalent }}
+  </div>
+</div>
